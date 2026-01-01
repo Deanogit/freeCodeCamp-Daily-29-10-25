@@ -12,16 +12,25 @@
 function sort(emails) {
   // console.log(emails)
 
-  const sorted = [];
+  // const sorted = [];
 
   // sort first by domain
   // split the emails[i] into two and sort the second
-  for (let i = 0; i < emails.length; i++) {
-    console.log(emails[i].split('@'));
-    sorted.push(emails[i].split('@'));
-  }
+  // for (let i = 0; i < emails.length; i++) {
+  //   console.log(emails[i].split("@"))
+  //   sorted.push(emails[i].split("@"))
+  // }
   // sort by username
 
-  console.log(sorted.sort((a, b) => b - a));
+  // console.log(sorted.sort((a, b) => b - a))
   // return emails;
+
+  return [...emails].sort((a, b) => {
+    const [userA, domA] = a.toLowerCase().split('@');
+    const [userB, domB] = b.toLowerCase().split('@');
+
+    // sort by domain first
+    // if domains are equal, localCompare returns 0, falsy, so second half executes
+    return domA.localeCompare(domB) || userA.localeCompare(userB);
+  });
 }
