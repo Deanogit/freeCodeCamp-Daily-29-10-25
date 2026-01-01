@@ -10,10 +10,18 @@
 // For example, given ["jill@mail.com", "john@example.com", "jane@example.com"], return ["jane@example.com", "john@example.com", "jill@mail.com"].
 
 function sort(emails) {
-  console.log(emails);
+  // console.log(emails)
+
+  const sorted = [];
 
   // sort first by domain
-
+  // split the emails[i] into two and sort the second
+  for (let i = 0; i < emails.length; i++) {
+    console.log(emails[i].split('@'));
+    sorted.push(emails[i].split('@'));
+  }
   // sort by username
-  return emails;
+
+  console.log(sorted.sort((a, b) => b - a));
+  // return emails;
 }
