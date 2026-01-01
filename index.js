@@ -8,3 +8,12 @@
 // Return an array of the sorted addresses.
 // Returned addresses should retain their original case.
 // For example, given ["jill@mail.com", "john@example.com", "jane@example.com"], return ["jane@example.com", "john@example.com", "jill@mail.com"].
+
+function sort(emails) {
+  console.log(emails);
+
+  // sort first by domain
+
+  // sort by username
+  return emails;
+}
